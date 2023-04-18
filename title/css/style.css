@@ -32,3 +32,10 @@ body {
     border-radius: 5px;
   }
   
+  ul[title]::before {
+    content: attr(title);
+    /* then add some nice styling as needed, eg: */
+    display: block;
+    font-weight: bold;
+    padding: 4px;
+}
