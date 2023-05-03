@@ -12,24 +12,38 @@
 
 <body>
     <header>
-        <div class="container">
-            <ul>
-                <li>About</li>
-                <li>Instructions</li>
-            </ul>
+        <div class="header">
         </div>
     </header>
-    <div class="container">
-        <form action="" id="loginForm">
-            <h1>New Title</h1>
-            <input type="text" id="new_title" class="form-control" placeholder="Here...">
-            <button type="submit">Submit</button>
-        </form>
-    </div>
-    <div class="container">
-        <h3>To be used in conjunction with Firefox and the <a
-                href="https://addons.mozilla.org/en-US/firefox/addon/tree-style-tab/">Tree Style Tab</a> extension.</h3>
-    </div>
+    <main>
+        <section>
+            <article>
+                <div class="container">
+                    <span>
+                        <p> In the form below, type out a subject title. </p>
+                        <p> Clicking 'Create' will open a new tab with the subject as the title.</p>
+                    </span>
+                    <form action="" id="loginForm">
+                        <h1>New Subject Tab:</h1>
+                        <input type="text" id="new_title" class="form-control" placeholder="E.g., Homework">
+                        <button type="submit">Create</button>
+                    </form>
+            </article>
+        </section>
+        <section>
+            <article>
+                <details>
+                    <summary>
+                        TreeStyle Tabs Setup
+                    </summary>
+                    <a
+                        href="https://aaron-imbrock.github.io/dotfiles/hide-tabs-in-firefox-treestyle.html">Instructions</a>
+                </details>
+            </article>
+        </section>
+    </main>
+    <footer>
+    </footer>
 </body>
 <script src="js/app.js"></script>
 
