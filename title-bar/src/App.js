@@ -1,13 +1,11 @@
 // import logo from './logo.svg';
 import './App.css';
 import { createRoot } from 'react-dom/client'; 
-import { useState } from 'react';
 
 export const defaultTitle = "Lunchables";
 export const time = createRoot(document.getElementById('time'));
 
 export default function EditPost() {
-  const title = useState(0);
   function handleSubmit(e) {
     e.preventDefault();
 
