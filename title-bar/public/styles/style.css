@@ -30,8 +30,16 @@ fieldset {
     padding: 20px;
 }
 
-code, pre {
-    background-color: grey;
+code{
+    background-color: lightgray;
+}
+
+pre {
+    background-color: lightgray;
+    outline-width: 1px;
+    outline-style: solid;
+    outline-color: #21333F;
+    border-radius: 5px;
 }
 
 legend {
