@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Icon in the highest resolution we need it for -->
+    <link rel="icon" sizes="192x192" href="logo512.png">
+
+    <!-- Apple Touch Icon (reuse 192px icon.png) -->
+    <link rel="apple-touch-icon" href="logo512.png">
+
+    <!-- Safari Pinned Tab Icon -->
+    <link rel="mask-icon" href="logo512.png">
+    <title>TreeTab Install Instructions</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #21333F;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            padding: 20px;
+        }
+
+        form {
+            padding: 20px;
+        }
+
+        code {
+            background-color: lightgrey;
+        }
+
+        fieldset {
+            border-radius: 5px;
+            padding: 20px;
+        }
+
+        legend {
+            background-color: #21333F;
+            color: #fff;
+            text-align: center;
+            padding: 6px 12px;
+            border-radius: 5px;
+        }
+
+        .text-edit {
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 10px 0;
+            background-color: #fff;
+        }
+
+        .checklist {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .checklist li {
+            margin: 5px 0;
+        }
+
+        h2 {
+            font-size: 20px;
+            color: #333;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1 id="root">Work Items</h1>
+    </header>
+    <main>
+        <form>
+            <fieldset>
+                <legend>Overview</legend>
+                <div contenteditable="false" class="text-edit">
+                    <h2>Hide tab bar when using TreeStyle Tabs in Firefox</h2>
+                    <p>Taken partially from <a href="https://www.userchrome.org/how-create-userchrome-css.html">here</a>.</p>
+                </div>
+            </fieldset>
+        </form>
+        <form>
+            <fieldset>
+                <legend>In Firefox</legend>
+                <div contenteditable="false" class="text-edit">
+                    <p>Install <a href="https://addons.mozilla.org/en-US/firefox/addon/tree-style-tab/">TreeStyle Tabs</a>.</p>
+                    <p>Type or paste <code>about:config</code> in the address bar and press Enter/Return to load it.</p>
+                    <p>In the search box above the list, type or paste <code>userprof</code> and pause while the list is filtered. If you don't see anything on the list, ignore this step.</p>
+                    <p>Switch <code>toolkit.legacyUserProfileCustomizations.stylesheets</code> preference from false to true.</p>
+                    <p>Type or paste <code>about:support</code> in the address bar and press Enter/Return to load it.</p>
+                    <p>Note the <code>Profile Directory</code>.</p>
+                </div>
+            </fieldset>
+        </form>
+        <form>
+            <fieldset>
+                <legend>In Terminal</legend>
+                <div contenteditable="false" class="text-edit">
+                    <p>cd to <code>Profile Directory</code> and create a folder called <code>chrome</code>.</p>
+                    <p>Note, that on newer versions of Firefox <code>Update Folder</code> is in the field where you previously expected to see <code>Profile Folder</code>. <code>Profile Folder</code> is now farther down.</p>
+                    <p>Copy this into the terminal:</p>
+                    <code>
+                        mkdir chrome;
+                        cat << EOF > ./chrome/userChrome.css
+                        #TabsToolbar {
+                            visibility: collapse;
+                        }
+
+                        EOF
+                    </code>
+                    <p>In Firefox again:</p>
+                    <p>Restart all Firefox sessions.</p>
+                    <p>Right click anywhere on menu section of Firefox, and check 'Menu Bar'.</p>
+                </div>
+            </fieldset>
+        </form>
+    </main>
+    <footer>
+        <!-- Your footer content goes here -->
+    </footer>
+</body>
+
+</html>
