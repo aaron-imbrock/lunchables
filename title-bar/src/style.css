@@ -30,6 +30,10 @@ fieldset {
     padding: 20px;
 }
 
+code, pre {
+    background-color: grey;
+}
+
 legend {
     background-color: #21333F;
     color: #fff;
