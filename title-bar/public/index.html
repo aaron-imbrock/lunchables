@@ -1,25 +1,118 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
+<html>
+
+<head>
+    <meta charset="utf-8">
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta
       name="description"
       content="A tab organizer for those that love vertical tabs."
     />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <title>Lunchables Tab</title>
-  </head>
-  <body>
+    <meta name="theme-color" content="#000000" />
+    <!-- Icon in the highest resolution we need it for -->
+    <link rel="icon" sizes="192x192" href="logo192.png">
+    <!-- Apple Touch Icon (reuse 192px icon.png) -->
+    <link rel="apple-touch-icon" href="logo512.png">
+    <!-- Safari Pinned Tab Icon -->
+    <link rel="mask-icon" href="logo512.png">
+    <title>Work Items</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #21333F;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            padding: 20px;
+        }
+
+        form {
+            padding: 20px;
+        }
+
+        fieldset {
+            border-radius: 5px;
+            padding: 20px;
+        }
+
+        legend {
+            background-color: #21333F;
+            color: #fff;
+            text-align: center;
+            padding: 6px 12px;
+            border-radius: 5px;
+        }
+
+        .text-edit {
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 10px 0;
+            background-color: #fff;
+        }
+
+        .checklist {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .checklist li {
+            margin: 5px 0;
+        }
+
+        h2 {
+            font-size: 20px;
+            color: #333;
+        }
+    </style>
+</head>
+
+<body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <div><a href="scratch.html">Scratch Pad</a></div>
-  </body>
+    <header>
+        <h1 id="root">Work Items</h1>
+    </header>
+    <main>
+        <form>
+            <fieldset>
+                <legend>Instructions</legend>
+                <div contenteditable="false" class="text-edit">
+                    <h2>Click on the "Work Items" text above. By editing it the Tab title will change to match. Now you can organize your tabs under custom Subject tabs.
+                        Firefox and TreeStyle Tabs extension instructions are <a href="instructions.html">here</a>.</h2>
+                </div>
+            </fieldset>
+        </form>
+        <form>
+            <fieldset>
+                <legend>Scratch Pad</legend>
+                <div contenteditable="true" class="text-edit" >
+                    <h2>Priority:  </h2>
+                    <h2>Then:  </h2>
+                    <h2>Then:  </h2>
+                    <h2>Then:  </h2>
+                    <h2>Reminder:  </h2>
+                </div>
+            </fieldset>
+        </form>
+    </main>
+    <footer>
+        <!-- Your footer content goes here -->
+    </footer>
+</body>
+
 </html>

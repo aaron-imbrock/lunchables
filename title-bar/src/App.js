@@ -2,7 +2,7 @@
 import './App.css';
 import { createRoot } from 'react-dom/client'; 
 
-export const defaultTitle = "Lunchables";
+export const defaultTitle = "Work Items";
 // export const time = createRoot(document.getElementById('time'));
 
 export default function EditPost() {
@@ -19,10 +19,9 @@ export default function EditPost() {
 
   return (
     <>
-    <h1>Update Title</h1>
     <form method="post" onSubmit={handleSubmit}>
       <label>
-        New title: <input name="postTitle" defaultValue={ defaultTitle } />
+        <input name="postTitle" defaultValue={ defaultTitle } />
       </label>
       <button type="submit">Update This Tab</button>
       <button type="submit">Create New Tab</button>

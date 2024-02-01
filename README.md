@@ -6,6 +6,7 @@ What we're trying to do here is have each folder under the top-level repo folder
 The `gh-pages` app does the heavy lifting, collecting all the necessary react project files under the `build` folder, thus making it possible to host any react-app project on GH Pages as if it was a static website. The devil though is in the details. This doc covers setting up a project called `title-bar` in the `title-bar` folder, using the `gh-pages` static-site project. It is a meant as a recipe for all projects that come after.
 
 There's always the [gh-pages](https://github.com/gitname/react-gh-pages) for context, however any reason for referencing that doc needs to be back-added to this README. Bitch, ya hear me?!
+Remember that your view is from the top-level repo but the project exists solely inside of the `title-bar` folder.
 
 ## Why
 
