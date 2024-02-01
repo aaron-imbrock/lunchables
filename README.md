@@ -9,7 +9,7 @@ There's always the [gh-pages](https://github.com/gitname/react-gh-pages) for con
 
 ## Why
 
-
+Because it's 1 in the morning and I haven't touched this repo for 6 months. 6 months ago, the last time I did this, I also couldn't remember how to do any of this. Bitch, ya hear me!?
 
 ## Howto
 
