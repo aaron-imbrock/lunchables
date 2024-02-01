@@ -1,11 +1,10 @@
-// import logo from './logo.svg';
+import React from 'react';
 import './App.css';
-import { createRoot } from 'react-dom/client'; 
+import ReactDOM from 'react-dom';
 
 export const defaultTitle = "Work Items";
-// export const time = createRoot(document.getElementById('time'));
 
-export default function EditPost() {
+export default function EditPost({ targetId }) {
   function handleSubmit(e) {
     e.preventDefault();
 
@@ -13,32 +12,32 @@ export default function EditPost() {
     const formData = new FormData(form);
 
     const formJson = Object.fromEntries(formData.entries());
-    // console.log(formJson);
+    
+    // Update document title
     document.title = formJson.postTitle;
-    document.root = formJson.postTitle;
+
+    // Update content in the specified targetId div
+    const targetElement = document.getElementById(targetId);
+    if (targetElement) {
+      const targetRoot = ReactDOM.createRoot(targetElement);
+      targetRoot.render(
+        <React.StrictMode>
+          <div>
+            <h1>{formJson.postTitle}</h1>
+          </div>
+        </React.StrictMode>
+      );
+    }
   }
 
   return (
     <>
-    <form method="post" onSubmit={handleSubmit}>
-      <label>
-        <input name="postTitle" defaultValue={ defaultTitle } />
-      </label>
-      <button type="submit">Update This Tab</button>
-      {/* <button type="submit">Create New Tab</button> */}
-    </form>
+      <form method="post" onSubmit={handleSubmit}>
+        <label>
+          <input name="postTitle" defaultValue={ defaultTitle } />
+        </label>
+        <button type="submit">Update This Tab</button>
+      </form>
     </>
   );
 }
-
-// function clock() {
-//   const element = (
-//     <div>
-//       <h4>Browser Time: {new Date().toLocaleTimeString()}</h4>
-//       <h4>UTC: {new Date().toUTCString()}</h4>
-//     </div>
-//   );
-//   time.render(element);
-// }
-
-// setInterval(clock, 1000);
