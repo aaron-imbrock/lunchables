@@ -37,7 +37,7 @@ export default function EditPost({ targetId }) {
           <input name="postTitle" defaultValue={ defaultTitle } />
         </label>
         <button type="submit">Update this Tab</button>
-        <button type="submit">Create New Tab</button>
+        {/* <button type="submit">Create New Tab</button> */}
       </form>
     </>
   );
