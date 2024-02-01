@@ -13,73 +13,7 @@
     <!-- Safari Pinned Tab Icon -->
     <link rel="mask-icon" href="logo512.png">
     <title>TreeTab Install Instructions</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            margin: 0;
-            padding: 0;
-        }
-
-        header {
-            background-color: #21333F;
-            color: #fff;
-            text-align: center;
-            padding: 20px 0;
-        }
-
-        main {
-            max-width: 800px;
-            margin: 20px auto;
-            background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            border-radius: 5px;
-            padding: 20px;
-        }
-
-        form {
-            padding: 20px;
-        }
-
-        code {
-            background-color: lightgrey;
-        }
-
-        fieldset {
-            border-radius: 5px;
-            padding: 20px;
-        }
-
-        legend {
-            background-color: #21333F;
-            color: #fff;
-            text-align: center;
-            padding: 6px 12px;
-            border-radius: 5px;
-        }
-
-        .text-edit {
-            border: 1px solid #ccc;
-            padding: 10px;
-            border-radius: 5px;
-            margin: 10px 0;
-            background-color: #fff;
-        }
-
-        .checklist {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        .checklist li {
-            margin: 5px 0;
-        }
-
-        h2 {
-            font-size: 20px;
-            color: #333;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -116,7 +50,7 @@
                     <p>cd to <code>Profile Directory</code> and create a folder called <code>chrome</code>.</p>
                     <p>Note, that on newer versions of Firefox <code>Update Folder</code> is in the field where you previously expected to see <code>Profile Folder</code>. <code>Profile Folder</code> is now farther down.</p>
                     <p>Copy this into the terminal:</p>
-                    <code>
+                    <pre>
                         mkdir chrome;
                         cat << EOF > ./chrome/userChrome.css
                         #TabsToolbar {
@@ -124,7 +58,7 @@
                         }
 
                         EOF
-                    </code>
+                    </pre>
                     <p>In Firefox again:</p>
                     <p>Restart all Firefox sessions.</p>
                     <p>Right click anywhere on menu section of Firefox, and check 'Menu Bar'.</p>
