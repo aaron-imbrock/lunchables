@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/lunchables/title-bar/static/css/main.65c33619.css",
+    "main.css": "/lunchables/title-bar/static/css/main.dc4d6ff2.css",
     "main.js": "/lunchables/title-bar/static/js/main.63524d83.js",
     "index.html": "/lunchables/title-bar/index.html",
-    "main.65c33619.css.map": "/lunchables/title-bar/static/css/main.65c33619.css.map",
+    "main.dc4d6ff2.css.map": "/lunchables/title-bar/static/css/main.dc4d6ff2.css.map",
     "main.63524d83.js.map": "/lunchables/title-bar/static/js/main.63524d83.js.map"
   },
   "entrypoints": [
-    "static/css/main.65c33619.css",
+    "static/css/main.dc4d6ff2.css",
     "static/js/main.63524d83.js"
   ]
 }
