@@ -3,7 +3,7 @@ import './App.css';
 import { createRoot } from 'react-dom/client'; 
 
 export const defaultTitle = "Lunchables";
-export const time = createRoot(document.getElementById('time'));
+// export const time = createRoot(document.getElementById('time'));
 
 export default function EditPost() {
   function handleSubmit(e) {
@@ -31,14 +31,14 @@ export default function EditPost() {
   );
 }
 
-function clock() {
-  const element = (
-    <div>
-      <h4>Browser Time: {new Date().toLocaleTimeString()}</h4>
-      <h4>UTC: {new Date().toUTCString()}</h4>
-    </div>
-  );
-  time.render(element);
-}
+// function clock() {
+//   const element = (
+//     <div>
+//       <h4>Browser Time: {new Date().toLocaleTimeString()}</h4>
+//       <h4>UTC: {new Date().toUTCString()}</h4>
+//     </div>
+//   );
+//   time.render(element);
+// }
 
-setInterval(clock, 1000);
+// setInterval(clock, 1000);
