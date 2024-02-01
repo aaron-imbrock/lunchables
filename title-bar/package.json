@@ -1,7 +1,7 @@
 {
   "name": "title-bar",
   "version": "0.1.0",
-  "homepage": "https://aaron-imbrock.github.io/lunchables/",
+  "homepage": "https://aaron-imbrock.github.io/lunchables/title-bar",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
@@ -14,7 +14,7 @@
   },
   "scripts": {
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "deploy": "gh-pages -d build -e title-bar",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
