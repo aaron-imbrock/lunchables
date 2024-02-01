@@ -15,6 +15,7 @@ export default function EditPost() {
     const formJson = Object.fromEntries(formData.entries());
     // console.log(formJson);
     document.title = formJson.postTitle;
+    document.root = formJson.postTitle;
   }
 
   return (
