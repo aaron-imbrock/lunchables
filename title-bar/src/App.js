@@ -23,7 +23,7 @@ export default function EditPost({ targetId }) {
       targetRoot.render(
         <React.StrictMode>
           <div>
-            <h1>{formJson.postTitle}</h1>
+            {formJson.postTitle}
           </div>
         </React.StrictMode>
       );
@@ -36,7 +36,7 @@ export default function EditPost({ targetId }) {
         <label>
           <input name="postTitle" defaultValue={ defaultTitle } />
         </label>
-        <button type="submit">Update This Tab</button>
+        <button type="submit">Update this Tab</button>
       </form>
     </>
   );
